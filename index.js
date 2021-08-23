@@ -108,5 +108,14 @@ let myChart = new Chart(ctx, {
 });
 
 // dropdown legend 
+const legendButton = document.querySelector('.legendBtn');
+const closeButton = document.querySelector('.legend-options__closing-btn');
+const openedLegend = document.querySelector('.legend-options--opened');
 
-const legendButton = document.querySelector('.legend');
+legendButton.onclick = () => {
+    openedLegend.classList.remove('closed');
+}
+
+closeButton.onclick = () => {
+    openedLegend.classList.add('closed');
+}

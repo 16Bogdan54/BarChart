@@ -38,15 +38,15 @@ a {
       align-self: flex-end;
 }
 
-.legend-options {
+.legend-options--opened {
   position: absolute;
-  top: 10%;
-  right: 8%;
-  padding: 0.5rem 1rem;
-  background-color: #fff;
+  right: 4%;
+  background-color: white;
+  -webkit-transition: all .4 ease;
+  transition: all .4 ease;
 }
 
-.legend-options .legend-options__close-and-heading {
+.legend-options--opened .legend-options__close-and-heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,10 +59,35 @@ a {
   background-color: #D7DDD6;
   font-weight: bold;
   font-size: 1rem;
-  padding: 1rem 0.5rem;
+  padding: 1rem 1.2rem;
+  width: 100%;
 }
 
-.legend-options .legend-options__close-and-heading .legend-options__heading {
+.legend-options--opened .legend-options__close-and-heading .legend-options__heading {
   margin-right: 2rem;
+}
+
+.legend-options--opened .legend-options__close-and-heading .legend-options__closing-btn {
+  cursor: pointer;
+}
+
+.legend-options--opened .legend-options__option {
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+}
+
+.legend-options--opened .legend-options__option::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: maroon;
+  float: left;
+  margin-right: 1rem;
+}
+
+.closed {
+  display: none;
+  -webkit-transition: all .4 ease;
+  transition: all .4 ease;
 }
 /*# sourceMappingURL=style.css.map */
