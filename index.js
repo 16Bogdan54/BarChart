@@ -1,4 +1,13 @@
 
+/*
+*
+*    file includes:
+*        1) Bar Chart
+         2) Dropdown legend
+*
+*/
+
+
 // data
 let numbers = [];
 let numbers2 = [];
@@ -11,6 +20,11 @@ for(let i = 0; i < 12; i++) {
 }
 
 const ctx = document.getElementById('myChart');
+
+const DISPLAY = true;
+const BORDER = false;
+const CHART_AREA = false;
+const TICKS = true;
 
 let myChart = new Chart(ctx, {
     type: 'bar',
@@ -55,8 +69,12 @@ let myChart = new Chart(ctx, {
     ] // data set closing bracket 
     },
     options: {
+        responsive: true,
         scales: {
             y: {
+                grid: {
+                    drawBorder: false,
+                },
                 beginAtZero: true,
                 ticks: {
                     callback: function (value) {
@@ -69,6 +87,12 @@ let myChart = new Chart(ctx, {
                 }
             },
             x: {
+                grid: {
+                    display: DISPLAY,
+                    drawBorder: BORDER,
+                    drawOnChartArea: CHART_AREA,
+                    drawTicks: TICKS,
+                },
                 title: {
                     display: true,
                     text: 'Month & Decade'
@@ -82,3 +106,7 @@ let myChart = new Chart(ctx, {
         }
     }
 });
+
+// dropdown legend 
+
+const legendButton = document.querySelector('.legend');
