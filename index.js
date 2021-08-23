@@ -73,11 +73,11 @@ let myChart = new Chart(ctx, {
                     display: true,
                     text: 'Month & Decade'
                 },
-                // min: 1,
-                // max: 36,
-                // ticks: {
-                //     stepSize: 1 
-                // }
+                min: 1,
+                max: 36,
+                ticks: {
+                    stepSize: 1 
+                }
             }
         }
     }
